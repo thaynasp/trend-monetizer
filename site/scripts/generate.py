@@ -64,10 +64,12 @@ def generate_page(md_path):
     amazon_link = config['affiliate_links'][product_key]['amazon']
     shopee_link = config['affiliate_links'][product_key]['shopee']
     mercadolivre_link = config['affiliate_links'][product_key]['mercadolivre']
+    magalu_link = config['affiliate_links'][product_key]['magalu']
     
     page_html = page_html.replace('{{amazon_link}}', amazon_link)
     page_html = page_html.replace('{{shopee_link}}', shopee_link)
     page_html = page_html.replace('{{mercadolivre_link}}', mercadolivre_link)
+    page_html = page_html.replace('{{magalu_link}}', magalu_link)
 
     
     # Salvar
