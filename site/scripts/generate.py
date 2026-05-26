@@ -11,11 +11,23 @@ with open('../config.json', 'r') as f:
 with open('../assets/template.html', 'r') as f:
     template = f.read()
 
-# Criar pasta docs se não existir
-if not os.path.exists('../docs'):
-    os.makedirs('../docs')
-if not os.path.exists('../docs/blog'):
-    os.makedirs('../docs/blog')
+import shutil
+
+# Criar pasta docs na raiz se não existir
+root_docs = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../docs'))
+blog_dir = os.path.join(root_docs, 'blog')
+assets_dest = os.path.join(root_docs, 'assets')
+
+if not os.path.exists(root_docs):
+    os.makedirs(root_docs)
+if not os.path.exists(blog_dir):
+    os.makedirs(blog_dir)
+
+# Copiar assets
+if os.path.exists('../assets'):
+    if os.path.exists(assets_dest):
+        shutil.rmtree(assets_dest)
+    shutil.copytree('../assets', assets_dest)
 
 def generate_page(md_path):
     with open(md_path, 'r') as f:
@@ -40,7 +52,7 @@ def generate_page(md_path):
     page_html = page_html.replace('{{content}}', html_content)
     page_html = page_html.replace('{{description}}', f"Saiba tudo sobre {title} no Portal Vitalidade Feminina.")
     
-    # Lógica simples para link de afiliado (poderia ser mais complexo)
+    # Lógica simples para link de afiliado
     affiliate_link = config['affiliate_links']['magnesium'] # Default
     if 'creatina' in md_content.lower():
         affiliate_link = config['affiliate_links']['creatine']
@@ -51,7 +63,7 @@ def generate_page(md_path):
     
     # Salvar
     filename = os.path.basename(md_path).replace('.md', '.html')
-    output_path = os.path.join('../docs/blog', filename)
+    output_path = os.path.join(blog_dir, filename)
     with open(output_path, 'w') as f:
         f.write(page_html)
     
@@ -116,7 +128,7 @@ index_html = index_template.replace('{{site_name}}', config['site_name'])
 index_html = index_html.replace('{{site_tagline}}', config['site_tagline'])
 index_html = index_html.replace('{{article_list}}', article_list_html)
 
-with open('../docs/index.html', 'w') as f:
+with open(os.path.join(root_docs, 'index.html'), 'w') as f:
     f.write(index_html)
 
-print(f"Sucesso! {len(articles)} artigos gerados.")
+print(f"Sucesso! {len(articles)} artigos gerados na pasta /docs.")
