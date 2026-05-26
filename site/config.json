@@ -4,22 +4,27 @@
   "base_url": "https://thaynasp.github.io/trend-monetizer/",
   "amazon_id": "anyahtsp02-20",
   "shopee_id": "18322620100",
+  "mercadolivre_url": "https://www.mercadolivre.com.br/social/sith23754",
   "affiliate_links": {
     "magnesium": {
       "amazon": "https://www.amazon.com.br/s?k=magnesio+bisglicinato+quelado&tag=anyahtsp02-20",
-      "shopee": "https://shopee.com.br/search?keyword=magnesio+bisglicinato+quelado"
+      "shopee": "https://shopee.com.br/search?keyword=magnesio+bisglicinato+quelado",
+      "mercadolivre": "https://lista.mercadolivre.com.br/magnesio-bisglicinato-quelado"
     },
     "creatine": {
       "amazon": "https://www.amazon.com.br/s?k=creatina+monoidratada+creapure&tag=anyahtsp02-20",
-      "shopee": "https://shopee.com.br/search?keyword=creatina+monoidratada"
+      "shopee": "https://shopee.com.br/search?keyword=creatina+monoidratada",
+      "mercadolivre": "https://lista.mercadolivre.com.br/creatina-monoidratada-creapure"
     },
     "maca": {
       "amazon": "https://www.amazon.com.br/s?k=maca+peruana+gelatinizada&tag=anyahtsp02-20",
-      "shopee": "https://shopee.com.br/search?keyword=maca+peruana"
+      "shopee": "https://shopee.com.br/search?keyword=maca+peruana",
+      "mercadolivre": "https://lista.mercadolivre.com.br/maca-peruana-gelatinizada"
     },
     "collagen": {
       "amazon": "https://www.amazon.com.br/s?k=colageno+tipo+2+menopausa&tag=anyahtsp02-20",
-      "shopee": "https://shopee.com.br/search?keyword=colageno+tipo+2"
+      "shopee": "https://shopee.com.br/search?keyword=colageno+tipo+2",
+      "mercadolivre": "https://lista.mercadolivre.com.br/colageno-tipo-2"
     }
   },
   "contact_email": "contato@vitalidadefeminina.com"
