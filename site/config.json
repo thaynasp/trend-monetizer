@@ -1,0 +1,12 @@
+{
+  "site_name": "Portal Vitalidade Feminina",
+  "site_tagline": "Sua jornada de longevidade e bem-estar na maturidade.",
+  "base_url": "https://seu-usuario.github.io/vitalidade-feminina/",
+  "affiliate_links": {
+    "magnesium": "https://amzn.to/exemplo-magnesio",
+    "creatine": "https://amzn.to/exemplo-creatina",
+    "maca": "https://amzn.to/exemplo-maca",
+    "collagen": "https://amzn.to/exemplo-colageno"
+  },
+  "contact_email": "contato@vitalidadefeminina.com"
+}

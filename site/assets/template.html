@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | {{site_name}}</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <meta name="description" content="{{description}}">
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html" style="text-decoration:none; color:inherit;">{{site_name}}</a></h1>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <article>
+            {{content}}
+        </article>
+        
+        <hr>
+        <div class="cta-section article-card" style="text-align:center;">
+            <h3>Recomendação Especial</h3>
+            <p>Confira os melhores suplementos selecionados pela nossa equipe para sua saúde e vitalidade.</p>
+            <a href="{{affiliate_link}}" class="cta-button">Ver na Amazon / Mercado Livre</a>
+        </div>
+    </div>
+
+    <footer id="contato">
+        <p>&copy; 2026 {{site_name}}. {{site_tagline}}</p>
+        <p>Contato: {{contact_email}}</p>
+    </footer>
+</body>
+</html>
