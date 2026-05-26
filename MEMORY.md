@@ -1,20 +1,18 @@
 # MEMORY.md - Sistema de Detecção e Monetização
 
-## Status Atual: MVP Concluído 🟢
-O sistema de detecção e monetização foi configurado para o nicho de **Saúde na Menopausa e Longevidade Feminina (Femtech)**.
+## Status Atual: Automação Total 🚀
+O sistema agora opera de forma 100% autônoma após o push de conteúdo.
 
-## Ativos Criados:
-- **PLAN.md:** Justificativa e visão geral.
-- **KEYWORDS_MVP.md:** Lista de palavras-chave de alta conversão.
-- **ADS_STRATEGY.md:** Plano de validação inicial.
-- **Site (docs/):** Site estático pronto para GitHub Pages com 3 artigos otimizados.
-- **Gerador (scripts/):** Script Python para expansão automática de conteúdo.
+## Infraestrutura:
+- **Repositório:** `thaynasp/trend-monetizer`
+- **CI/CD:** GitHub Actions (.github/workflows/deploy.yml) gera o site automaticamente.
+- **Hosting:** GitHub Pages servindo da pasta `/docs`.
+- **Gerenciamento:** GitHub CLI (`gh`) configurado e credenciais salvas localmente.
 
-## Como Escalar (Ciclo REPLICAR):
-1. **Validar:** Executar as campanhas de ADS_STRATEGY.md.
-2. **Expandir:** Adicionar novos arquivos `.md` em `site/content/` para as palavras-chave restantes em `KEYWORDS_MVP.md`.
-3. **Gerar:** Rodar `python3 generate.py` para atualizar o site.
-4. **Replicar:** Identificar nova tendência 🟢 e repetir o processo em uma nova pasta de projeto.
+## Fluxo de Trabalho Automatizado:
+1. Criar `.md` em `site/content/`.
+2. `git push`.
+3. GitHub Actions processa e publica em 1-2 minutos.
 
 ## Próxima Sugestão de Nicho:
 - **Kits de Energia Solar Híbrida (DIY):** Alto ticket médio, tendência crescente de independência energética no Brasil 2026.
