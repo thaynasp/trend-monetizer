@@ -53,13 +53,20 @@ def generate_page(md_path):
     page_html = page_html.replace('{{description}}', f"Saiba tudo sobre {title} no Portal Vitalidade Feminina.")
     
     # Lógica simples para link de afiliado
-    affiliate_link = config['affiliate_links']['magnesium'] # Default
+    product_key = 'magnesium' # Default
     if 'creatina' in md_content.lower():
-        affiliate_link = config['affiliate_links']['creatine']
+        product_key = 'creatine'
     elif 'maca' in md_content.lower():
-        affiliate_link = config['affiliate_links']['maca']
-        
-    page_html = page_html.replace('{{affiliate_link}}', affiliate_link)
+        product_key = 'maca'
+    elif 'colageno' in md_content.lower():
+        product_key = 'collagen'
+
+    amazon_link = config['affiliate_links'][product_key]['amazon']
+    shopee_link = config['affiliate_links'][product_key]['shopee']
+
+    page_html = page_html.replace('{{amazon_link}}', amazon_link)
+    page_html = page_html.replace('{{shopee_link}}', shopee_link)
+
     
     # Salvar
     filename = os.path.basename(md_path).replace('.md', '.html')
